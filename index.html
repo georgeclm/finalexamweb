@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Exam Web Programming</title>
+    <!--for the style connect and the javascript feature search using DOM and script and the font style from google that i like which is Monserrat-->
+
+    <link rel="stylesheet" href="../../test/sytles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+        <!-- navigation bar and the wrappper for the header -->
+
+    <header>
+    <div class="nav-wrapper">
+        <div class="left-side">
+            <div class="nav-link-wrapper active-nav-link">
+                <a href="index.html">Home</a>
+            </div>
+            <div class="nav-link-wrapper">
+                <a href="#cal">Calculator</a>
+            </div>
+            <div class="nav-link-wrapper">
+                <a href="#lorem">Lorem Ipsum</a>
+            </div>
+            <div class="nav-link-wrapper">
+                <a href="#todolist">To Do List</a>
+            </div>
+            <div class="nav-link-wrapper">
+                <a href="#gradetable">Student Table</a>
+            </div>
+            <div class="nav-link-wrapper">
+                <a href="about.html">My Regard</a>
+            </div>
+
+
+
+        </div>
+        <div>
+            <div>
+            <div>EPAFRODITUS GEORGE</div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Rock Paper Scissors Game-->
+<!-- first button to input the username into the userlab if they want to change the default call the function changeuser-->
+<div class="forbutton">
+    <input type="text"  class = "user-form" id="username" placeholder="Your Username"> 
+    <input type="button" value="Input Username " onclick="changeuser()" class="thebutton">
+</div>
+<!-- boc and the point score board -->
+<div class="score-board">
+        <div id = "user-lab" class="badge">User</div>
+        <div id = "comp-lab" class="badge">Computer</div>
+        <span id="user-score">0</span> <br> 
+        <span id="comp-score">0</span>
+    </div>
+    <!-- text and later to display the result -->
+    <div class="result">
+        <p>Click on the icon below to begin the game </p>
+    </div>
+    <!-- image for the choices and each image represent id for what the user pick-->
+    <div class="choices">
+        <div class="choice" id="rock">
+            <img src="rock.png" alt="Rock">
+        </div>
+        <div class="choice" id="paper">
+            <img src="paper.png" alt="Paper">
+        </div>
+        <div class="choice" id="sci">
+            <img src="scissor.png" alt="Scissor">
+        </div>
+    </div>
+    <!-- just style to finish the game -->
+    <div class="action">
+        <div> Make Your Move</div>
+    </div>
+    <!-- Calculator Function-->
+    <div class="title" id="cal">
+        <p>Calculator</p>
+    </div>
+    <!-- Create the form that input number for the first and second number that is going to be count and set the id-->
+    <div class="form__group ">
+        <input type="number" class="form__field" placeholder="First Number" id= "num1" required />
+        <input type="number" class="form__field" placeholder="Second Number" id= "num2" required />
+    </div>
+    <!-- choices same as prior to input all the image and add id to represent the operator-->
+    <div class="choices">
+        <div class="choice" id="plus">
+            <img src="plus.png" alt="Plus">
+        </div>
+        <div class="choice" id="minus">
+            <img src="minus.png" alt="Minus">
+        </div>
+        <div class="choice" id="multiply">
+            <img src="asterisk.png" alt="Multiply">
+        </div>
+        <div class="choice" id="division">
+            <img src="division.png" alt="Division">
+        </div>
+    </div>
+    <!-- The button that is going to call the calculator function and execute it -->
+    <div class="forbutton">
+        <input type="button" value="Calculate" onclick="calculator()" class="thebutton">
+    </div>
+    <!-- for the result where it will get print inside this class-->
+    <div class="cal-result">
+        <p>Chose the Operator and then Calulate</p>
+    </div>
+    <!-- Other Lorem Ipsum function-->
+    <section class="section-center" id="lorem">
+        <h3>Tired of Lorem Ipsum???</h3>
+        <!-- Make the form for the label as the name then the input number with id and the button to submite the input-->
+        <form class="lorem-form">
+            <label for="amount">Paragraphs:</label>
+            <input type="number"  class = "form__field1" id="amount" placeholder="Your Paragraphs"> 
+            <!-- no function getting called here because it will take using the class and already mention button tyoe submit so it is the same-->
+            <button type="submit" class="thebutton">Generate</button>
+        </form>
+    </section>
+    <!-- for the result in this text-->
+    <div class="lorem-text"></div>
+    <!-- To Do List-->
+    <div class="todolist" id="todolist">
+       <h3> To Do List </h3>
+    </div>
+    <!-- Form for the input in text for the user and button to submit same as prior it will use the class not onclick and call the functionn right away but it is the same-->
+    <div class="input_div">
+        <input type="text" class="input" placeholder="Your to do list..">
+        <input type="button" class="addButton" value="Input">
+    </div>
+    <div class="container">
+        <!-- This is the class that i am going to make inside javascript 
+            <div class="item">
+            <input type="text" class="item_input" disabled>
+            <input type="button" class="editButton" value="Edit">
+            <input type="button" class="removeButton" value="Remove">
+        </div>
+    -->
+    </div>
+    <!-- For Grade Table-->
+    <div class="todolist" id="gradetable">
+        <h3> Grade Table </h3>
+    </div>
+    <!-- The button input that is going to search on this one using id-->
+    <div class="forbutton">
+        <input id="myInput" type="text" placeholder="search student or the grade (F-A)" class="form__field3">
+        <!-- create the table here for the student first, lastname, grade and the result that is empty but going to fill out with the user input-->
+    </div>
+    <table class="containtable">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Grade (0-100)</th>  
+                <th>The Grade (F-A)</th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <tr>
+                <td>Epafroditus</td>
+                <td>George</td>
+                <td><div class="forbutton"><input type="text" placeholder="Student Grade" id="stud1" class="form__field2" onchange="changegrade('stud1', 'grade1')"></div></td>                
+                <td><p id="grade1"></p></td>
+            </tr>
+            <tr>
+                <td>Tiara</td>
+                <td>None</td>
+                <td><div class="forbutton"><input type="text" placeholder="Student Grade" id="stud2" class="form__field2" onchange="changegrade('stud2','grade2')"></div></td>
+                <td><p id="grade2"></p></td>
+
+            </tr>
+            <tr>
+                <td>Annisa</td>
+                <td>Nurdiana</td>
+                <td><div class="forbutton"><input type="text" placeholder="Student Grade" id="stud3" class="form__field2" onchange="changegrade('stud3','grade3')"></div></td>
+                <td><p id="grade3"></p></td>
+            </tr>
+            <tr>
+                <td>Salman</td>
+                <td>Rabanni</td>
+                <td><div class="forbutton"><input type="text" placeholder="Student Grade" id="stud4" class="form__field2" onchange="changegrade('stud4','grade4')"></div></td>
+                <td><p id="grade4"></p></td>
+
+            </tr>
+            <tr>
+                <td>Christian</td>
+                <td>Wicaksono</td>
+                <td><div class="forbutton"><input type="text" placeholder="Student Grade" id="stud5" class="form__field2" onchange="changegrade('stud5', 'grade5')"></div></td>
+                <td><p id="grade5"></p></td>
+
+            </tr>
+            <tr>
+                <td>Iqbal</td>
+                <td>Ramadhan</td>
+                <td><div class="forbutton"><input type="text" placeholder="Student Grade" id="stud6" class="form__field2" onchange="changegrade('stud6','grade6')"></div></td>
+                <td><p id="grade6"></p></td>
+
+            </tr>
+            <tr>
+                <td>Paulus</td>
+                <td>Bangun</td>
+                <td><div class="forbutton"><input type="text" placeholder="Student Grade" id="stud7" class="form__field2" onchange="changegrade('stud7','grade7')"></div></td>
+                <td><p id="grade7"></p></td>
+
+            </tr>
+            <tr>
+                <td>Yudhistira</td>
+                <td>Barus</td>
+                <td><div class="forbutton"><input type="text" placeholder="Student Grade" id="stud8" class="form__field2" onchange='changegrade("stud8","grade8")'></div></td>
+                <td><p id="grade8"></p></td>
+
+            </tr>
+            <tr>
+                <td>Arief</td>
+                <td>Efendi</td>
+                <td><div class="forbutton"><input type="text" placeholder="Student Grade" id="stud9" class="form__field2" onchange="changegrade('stud9','grade9')"></div></td>
+                <td><p id="grade9"></p></td>
+
+            </tr>
+            <tr>
+                <td>Shinta</td>
+                <td>Dede</td>
+                <td><div class="forbutton"><input type="text" placeholder="Student Grade" id="stud10" class="form__field2" onchange="changegrade('stud10','grade10')"></div></td>
+                <td><p id="grade10"></p></td>
+
+            </tr>
+        </tbody>
+    </table>
+    <!-- For student data-->
+    <div class="todolist" id="gradetable">
+        <h3> Student Data </h3>
+    </div>
+    <!-- For the form input the user first name and the data-->
+    <div class="form__group ">
+        <input type="text" class="form__field" placeholder="Student First Name" id= "name1" />
+        <input type="text" class="form__field" placeholder="Data(no tel or ID)" id= "prop1" />
+    </div>
+    <!-- The button for this one i use normal onclick then the class function-->
+    <div class="forbutton">
+        <input type="button" value="Search" onclick="lookup()" class="thebutton">
+    </div>
+    <!-- for the result that is going to be shown inside the data-->
+    <div class="action">
+        <p id="lookupres"></p>
+    </div>
+    
+<!-- call the script-->
+
+    <script src="app.js"></script>
+</body>
+</html>
