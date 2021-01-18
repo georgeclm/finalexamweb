@@ -1,0 +1,431 @@
+/*For all */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+/* For body */
+body {
+  background-color: #181f3a;
+}
+/*For header*/
+header {
+  background: white;
+  padding: 20px;
+}
+/* title of the header*/
+header > h1 {
+  color: #25272e;
+  text-align: center;
+}
+/*nav bar*/
+.nav-wrapper {
+  display: flex;
+
+  justify-content: space-between;
+}
+.left-side {
+  display: flex;
+}
+
+.nav-link-wrapper {
+  text-transform: uppercase;
+  margin-right: 8px;
+}
+.nav-link-wrapper a {
+  color: #8a8a8a;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+.nav-link-wrapper:hover {
+  border-bottom: 1px solid black;
+}
+.nav-link-wrapper a:hover {
+  color: #25272e;
+}
+.active-nav-link {
+  /*to active border bottom home and about stays black*/
+
+  border-bottom: 1px solid black;
+}
+.active-nav-link a {
+  color: #25272e;
+}
+
+/* style for the scoreboard to makethe box*/
+.score-board {
+  margin: 20px auto;
+  border: 3px solid white;
+  border-radius: 4px;
+  text-align: center;
+  width: 200px;
+  color: white;
+  font-size: 40px;
+  padding: 15px 20px;
+  position: relative;
+}
+/* style for the badge for user and computer number score*/
+.badge {
+  background: #e2584d;
+  color: white;
+  font-size: 14px;
+  padding: 2px 10px;
+}
+/* for the position user and computer*/
+#user-lab {
+  position: absolute;
+  top: -10px;
+  left: 70px;
+}
+#comp-lab {
+  position: absolute;
+  top: 120px;
+  right: 50px;
+}
+/* result style */
+.result {
+  font-size: 40px;
+  color: white;
+}
+/* paragraph inside the result style*/
+.result > p {
+  font-weight: bold;
+  text-align: center;
+}
+/* for the image style*/
+.choices {
+  margin: 50px 0;
+  text-align: center;
+}
+.choice {
+  border-radius: 50%;
+  margin: 0 15px;
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+/* when image is hover */
+.choice:hover {
+  background: #24272e;
+  cursor: pointer;
+}
+.choice > img {
+  width: 100px;
+  height: 100px;
+}
+/*text style for default text*/
+.action {
+  margin-top: 50px;
+  margin-bottom: 250px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+/*form style for the input*/
+.form__group {
+  position: relative;
+  margin-top: 10px;
+  width: 20%;
+}
+/*each field input*/
+.form__field {
+  margin: auto 605px;
+  margin-bottom: 15px;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  text-align: center;
+}
+/*style when getting clicked*/
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+  text-align: center;
+}
+/* title style  */
+
+.title {
+  margin-top: 10px;
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+/* for the calculation result*/
+.cal-result {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 300px;
+}
+.cal-result > p {
+  font-weight: bold;
+  text-align: center;
+}
+/* button style*/
+.thebutton {
+  width: 100%;
+  max-width: 240px;
+  height: 54px;
+  padding: 8px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: #0f1923;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 0 0 5px inset rgba(white, 0.3);
+  position: relative;
+  margin: 10px 0;
+  border: 1px solid transparent;
+}
+/* outside button to center */
+.forbutton {
+  text-align: center;
+  margin-bottom: 15px;
+}
+/*style for each section padding*/
+.section {
+  padding: 5rem 0;
+}
+/* style for the section center*/
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 40rem;
+  margin-top: 5rem;
+  text-align: center;
+  color: white;
+}
+/* title style*/
+h3 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 50px;
+}
+/*style for the lorem form*/
+.lorem-form {
+  text-transform: capitalize;
+  letter-spacing: 0.25rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* style for the text label*/
+label {
+  font-size: 1.25rem;
+  color: white;
+}
+/* other form field style depend on the need*/
+.form__field1 {
+  margin-bottom: 15px;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  text-align: center;
+}
+.form__field1:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: x;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+  text-align: center;
+}
+/*style for the lorem text */
+.lorem-text {
+  margin: auto;
+  width: 50%;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.25rem;
+  margin-bottom: 600px;
+}
+/*style for the user form*/
+.user-form {
+  margin-bottom: 15px;
+  width: 20%;
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  text-align: center;
+}
+.user-form:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: x;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+  text-align: center;
+}
+/* to do list text style*/
+.todolist {
+  text-align: center;
+}
+/*for the input style in to do list*/
+.input_div {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.input_div .input {
+  padding: 0.5rem 1rem;
+  height: 50px;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  width: 450px;
+  font-size: 1.15rem;
+  margin: 0.25rem;
+  border-radius: 25px;
+}
+/*button style*/
+.addButton {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  margin: 0.25px;
+  cursor: pointer;
+}
+.addButton:hover {
+  opacity: 0.7;
+}
+/* for the container style*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 600px;
+}
+/* all style for the input inside javascript class*/
+/*each item inside style*/
+.item {
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 4px solid #fff;
+}
+/*input from the user style*/
+.item_input {
+  background: none;
+  outline: none;
+  color: #fff;
+  border: none;
+  width: 350px;
+  font-size: 1.4rem;
+}
+/* button style for edit*/
+.editButton {
+  font-size: 1.4rem;
+  margin: 0 0.5rem;
+  background: none;
+  outline: none;
+  border: none;
+  color: lime;
+  cursor: pointer;
+}
+
+.removeButton {
+  font-size: 1.4rem;
+  margin: 0 0.5rem;
+  background: none;
+  outline: none;
+  color: red;
+  border: none;
+  cursor: pointer;
+}
+.containtable {
+  margin-top: 15px;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+/* other form field style*/
+.form__field2 {
+  margin-bottom: 5px;
+  width: 80%;
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 2px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  text-align: center;
+}
+.form__field2:focus {
+  padding-bottom: 2px;
+  font-weight: 600;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+  text-align: center;
+}
+.form__field3 {
+  margin-bottom: 5px;
+  width: 25%;
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 2px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  text-align: center;
+}
+.form__field3:focus {
+  padding-bottom: 2px;
+  font-weight: 600;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+  text-align: center;
+}
+#gradetable {
+  margin-bottom: 20px;
+}
+/* for the hyperlink style*/
+.link {
+  color: #b38aff;
+  text-decoration: none;
+  transition: color 0.5s;
+  border-bottom: 1px solid black;
+}
+.link:hover {
+  transition: 1s;
+  border-bottom: 0px;
+  color: #ffffff;
+}
